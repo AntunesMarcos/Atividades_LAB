@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: locadora
+  server:
+    port: 8080
+
+datasources:
+  default:
+    url: jdbc:h2:mem:locadoraDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ""
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
+# Thymeleaf views config
+views:
+  thymeleaf:
+    enabled: true
+    cache: false
